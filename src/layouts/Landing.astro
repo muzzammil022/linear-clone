@@ -1,0 +1,50 @@
+---
+import { LandingText } from '../components/LandingText';
+---
+
+<div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+  <!-- Hero Headline -->
+  <section class="text-center text-xl sm:text-4xl font-bold tracking-tight md:text-6xl md:leading-[4rem] font-system pt-6 space-y-2">
+    <LandingText client:visible delay={0}>
+      Linear is a purpose-built tool
+    </LandingText>
+    <LandingText client:visible delay={0.3}>
+      for planning and building
+    </LandingText>
+    <LandingText client:visible delay={0.6}>
+      products
+    </LandingText>
+  </section>
+
+  <!-- Subtext -->
+  <section class="text-center text-lg text-gray-400 font-medium leading-snug pt-6 max-w-3xl mx-auto">
+    <LandingText client:visible delay={0.9}>
+      Meet the system for modern software development. Streamline issues, projects, and product roadmaps.
+    </LandingText>
+  </section>
+
+  <!-- Buttons -->
+  <section class="pt-8 flex flex-wrap justify-center items-center gap-4">
+    <div class="bg-white text-black rounded-full px-6 py-3 shadow-md hover:scale-105 transition-transform duration-200">
+      <LandingText
+        client:visible
+        delay={1.2}
+        class="text-lg md:text-xl font-semibold"
+      >
+        Start building
+      </LandingText>
+    </div>
+
+    <div class="px-6 py-3 rounded-full border border-gray-700 hover:bg-gray-800 transition-colors duration-200">
+      <LandingText
+        client:visible
+        delay={1.2}
+        class="text-lg md:text-xl font-medium text-gray-400 hover:text-white"
+      >
+        Introducing Linear for Agents →
+      </LandingText>
+    </div>
+  </section>
+
+</div>

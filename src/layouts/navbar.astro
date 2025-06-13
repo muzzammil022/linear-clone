@@ -1,0 +1,136 @@
+<nav class="bg-black flex justify-between items-center px-8 py-4 w-full fixed top-0 left-0 z-[1000] box-border border-b border-gray-800">
+  <!-- Left side -->
+  <div class="flex items-center flex-none min-w-[150px]">
+    <img src="/image.png" alt="Logo" class="h-8 w-auto max-w-[120px]">
+  </div>
+
+  <!-- Center -->
+  <div class="hidden lg:flex items-center flex-grow justify-center gap-8" id="navbar-center">
+    <!-- Features dropdown -->
+    <div class="relative group">
+      <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system cursor-pointer" id="features-trigger">Features</a>
+      <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-black border border-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out" id="features-dropdown">
+        <div class="p-6 grid grid-cols-3 gap-6">
+          <!-- Column 1 -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3">Core Features</h3>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Issue Tracking</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Project Management</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Roadmaps</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Cycles</a>
+          </div>
+          <!-- Column 2 -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3">Workflow</h3>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Triage</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Views</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Filters</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Automations</a>
+          </div>
+          <!-- Column 3 -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3">Collaboration</h3>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Comments</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Notifications</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Team Inbox</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Activity Feed</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Method dropdown -->
+    <div class="relative group">
+      <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system cursor-pointer" id="method-trigger">Method</a>
+      <div class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[600px] bg-black border border-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-out" id="method-dropdown">
+        <div class="p-6 grid grid-cols-3 gap-6">
+          <!-- Column 1 -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3">Methodology</h3>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Linear Method</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Best Practices</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Workflows</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Process</a>
+          </div>
+          <!-- Column 2 -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3">Management</h3>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Team Management</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Sprint Planning</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Retrospectives</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Goal Setting</a>
+          </div>
+          <!-- Column 3 -->
+          <div class="space-y-3">
+            <h3 class="text-xs font-semibold text-gray-300 uppercase tracking-wider mb-3">Resources</h3>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Documentation</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Templates</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Guides</a>
+            <a href="#" class="block px-3 py-2 text-sm text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-100">Case Studies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Customers</a>
+    <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Changelog</a>
+    <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Integrations</a>
+  </div>
+
+  <!-- Right side -->
+  <div class="flex items-center flex-none min-w-[150px] justify-end gap-4" id="navbar-right">
+    <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Login</a>
+    <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium bg-white text-black rounded-md no-underline transition-all duration-100 ease-out hover:bg-gray-200 hover:text-black font-system">Sign up</a>
+
+  <!-- Mobile menu button -->
+  <button class="lg:hidden flex flex-col bg-transparent border-none cursor-pointer p-2" id="mobile-toggle">
+    <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
+    <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
+    <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
+  </button>
+  </div>
+</nav>
+
+<!-- Mobile menu overlay (shows when mobile-active) -->
+<div class="fixed top-[72px] left-0 right-0 bg-black z-[999] hidden" id="mobile-menu">
+  <!-- Center nav items -->
+  <div class="flex flex-col p-4 gap-4">
+    <a class="relative flex items-center justify-start px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Features</a>
+    <a class="relative flex items-center justify-start px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Method</a>
+    <a class="relative flex items-center justify-start px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Customers</a>
+    <a class="relative flex items-center justify-start px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Changelog</a>
+    <a class="relative flex items-center justify-start px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Integrations</a>
+  </div>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileToggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Hide mobile menu when screen size increases
+  const mediaQuery = window.matchMedia('(min-width: 1024px)'); // lg breakpoint
+  
+  const handleScreenChange = (e) => {
+    if (e.matches) {
+      // Screen is lg or larger, hide mobile menu
+      mobileMenu?.classList.add('hidden');
+    }
+  };
+  
+  mediaQuery.addEventListener('change', handleScreenChange);
+  
+  // Check on initial load
+  handleScreenChange(mediaQuery);
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!mobileToggle?.contains(e.target as Node) && !mobileMenu?.contains(e.target as Node)) {
+      mobileMenu?.classList.add('hidden');
+    }
+  });
+</script>

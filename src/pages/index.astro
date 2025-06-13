@@ -1,0 +1,394 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Landing from '../layouts/Landing.astro';
+import Navbar from '../layouts/navbar.astro';
+import CustomerGrid from '../components/CustomerGrid';
+import CardLayout from '../components/CardLayout';
+import CardStack from '../components/CardStack';
+import Sidebar from '../components/Sidebar';
+import CardLayout2 from '../components/CardLayout2';
+import Footer from '../components/footer';
+---
+
+<Layout>
+  <Navbar />
+  <Landing />
+  
+  <!-- Video section that touches page margins - NO PADDING -->
+  <section class="w-full py-16 flex items-center justify-center">
+    <div class="relative w-full">
+      <!-- Loading indicator -->
+      <div id="video-loader" class="absolute inset-0 flex items-center justify-center bg-gray-900 rounded-lg z-10">
+        <div class="text-white">Loading video...</div>
+      </div>
+      
+      <video 
+        id="landing-video"
+        class="w-full rounded-lg object-cover shadow-lg opacity-0 transition-opacity duration-500"
+        muted
+        playsinline
+        preload="auto"
+        controls={false}
+      >
+        <source src="/land.mp4" type="video/mp4">
+        <p class="text-white">Your browser doesn't support video playbook.</p>
+      </video>
+    </div>
+  </section>
+  
+  <!-- Main content wrapper with consistent margins -->
+  <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Text: Powering the world's best... -->
+      <section class="py-16 text-center space-y-4">
+        <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+          Powering the world's best product teams.
+        </p>
+        <p class="text-base sm:text-lg md:text-xl text-gray-300">
+          From next-gen startups to established enterprises.
+        </p>
+      </section>
+
+      <!-- Animated Customer Grid -->
+      <section class="py-16">
+        <CustomerGrid client:load />
+      </section>
+
+      <!-- Text: Made for modern product teams -->
+      <section class="py-24 text-center space-y-6">
+        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+          Made for modern product teams
+        </p>
+        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          Linear is shaped by the practices and principles that distinguish world-class product teams from the rest: 
+          relentless focus, fast execution, and a commitment to the quality of craft. 
+          <span class="underline underline-offset-4 hover:text-white cursor-pointer transition">Make the switch →</span>
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Full-screen-wide CardLayout -->
+  <section class="w-full py-12 bg-black">
+    <CardLayout client:load />
+  </section>
+
+  <!-- Content sections with consistent spacing -->
+  <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+    <div class="max-w-7xl mx-auto">
+
+      <!-- Set the product direction section -->
+      <section class="py-28 text-center space-y-6">
+        <p><span class="hover:text-white cursor-pointer transition">✅ Project and Long Term Planning →</span></p>
+        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+          Set the product direction
+        </p>
+        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          Align your team around a unified product timeline. 
+          <span class="text-white">Plan, manage, and track all product initiatives with Linear's visual planning tools.</span>
+        </p>
+      </section>
+
+      <!-- Full-width image -->
+      <section class="py-16">
+        <img src="/b1.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
+      </section>
+
+      <!-- Two-column layout -->
+      <div class="py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div class="space-y-8">
+          <section class="text-center lg:text-left space-y-4">
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+              Manage projects end-to-end
+            </p>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+              Consolidate specs, milestones, tasks, and other documentation in one centralized location.
+            </p>
+          </section>
+          <section>
+            <img src="/b3.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
+          </section>
+        </div>
+        
+        <div class="space-y-8">
+          <section class="text-center lg:text-left space-y-4">
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+              Track progress seamlessly
+            </p>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+              Monitor project milestones, deadlines, and team performance with real-time updates and analytics.
+            </p>
+          </section>
+          <section>
+            <CardStack client:load />
+          </section>
+        </div>
+      </div>
+
+      <!-- Sidebar section -->
+      <section class="py-24">
+        <Sidebar client:load />
+        <div class="mt-8">
+          <img src="/b4.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
+        </div>
+      </section>
+
+      <!-- Issue tracking section -->
+      <section class=" text-center space-y-6">
+        <p><span class="hover:text-white cursor-pointer transition">〽️ Task Tracking and sprint planning →</span></p>
+        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+          Issue tracking you'll enjoy using
+        </p>
+        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          Optimized for speed and efficiency. 
+          <span class="text-white">Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.</span>
+        </p>
+      </section>
+
+      <section class="py-8">
+        <img src="/b5.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
+      </section>
+
+      <!-- Cycles and Triage section -->
+      <div class="py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div class="space-y-8">
+          <section class="text-center lg:text-left space-y-4">
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+              Build momentum with Cycles
+            </p>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+              Create healthy routines and focus your team on what work should happen next.
+            </p>
+          </section>
+          <section>
+            <img src="/b6.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
+          </section>
+        </div>
+        
+        <div class="space-y-8">
+          <section class="text-center lg:text-left space-y-4">
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+              Manage incoming work with Triage
+            </p>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+              Review and assign incoming bug reports, feature requests, and other unplanned work.
+            </p>
+          </section>
+          <section>
+            <img src="/b7.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
+          </section>
+        </div>
+      </div>
+
+      <!-- Linear Insights section -->
+      <section class=" space-y-6">
+        <div class="text-center lg:text-left space-y-4">
+          <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+            Linear Insights
+          </p>
+          <p class="text-base sm:text-lg md:text-xl text-gray-300">
+            Take the guesswork out of product planning with realtime, actionable data analytics.
+          </p>
+          <div class="flex justify-center lg:justify-start">
+            <a class="inline-flex items-center justify-center px-6 py-2 text-base font-medium bg-white text-black rounded-md no-underline transition-all duration-200 hover:bg-gray-200">
+              Learn More →
+            </a>
+          </div>
+        </div>
+        <div class="pt-8">
+          <img src="/b8.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
+        </div>
+      </section>
+
+      <!-- AI section -->
+      <section class="py-28 text-center space-y-6">
+        <p><span class="hover:text-white cursor-pointer transition">🔹 Artificial intelligence →</span></p>
+        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+          AI-powered productivity
+        </p>
+        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <span class="text-white">Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.</span>
+          Choose from a variety of AI agents and start delegating work, from code generation to other technical tasks.
+        </p>
+      </section>
+
+      <section class="py-8">
+        <img src="/b9.png" alt="AI Features" class="w-full rounded-lg object-cover shadow-lg" />
+      </section>
+
+      <!-- Linear MCP and AI built-in -->
+      <div class="py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+        <div class="space-y-8">
+          <section class="text-center lg:text-left space-y-4">
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+              Linear MCP
+            </p>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+              Connect Linear to your favorite tools including Cursor, Claude, ChatGPT, and more.
+            </p>
+          </section>
+          <section>
+            <img src="/b10.png" alt="Linear MCP" class="w-full rounded-lg object-cover shadow-lg" />
+          </section>
+        </div>
+        
+        <div class="space-y-8">
+          <section class="text-center lg:text-left space-y-4">
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+              AI natively built in
+            </p>
+            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+              Linear uses the latest language models to power workflows from semantic search to summarizing your team's project updates.
+            </p>
+          </section>
+          <section>
+            <img src="/b11.png" alt="AI Native" class="w-full rounded-lg object-cover shadow-lg" />
+          </section>
+        </div>
+      </div>
+
+      <!-- Built on strong foundations -->
+      <section class="py-28 text-center space-y-12">
+        <div class="space-y-6">
+          <p><span class="hover:text-white cursor-pointer transition">Under the hood →</span></p>
+          <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+            Built on strong foundations 
+          </p>
+          <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Linear is so simple to use, it's easy to overlook the wealth of complex technologies packed under the hood that keep Linear robust, safe, and blazing fast.
+          </p>
+        </div>
+        
+        <!-- Features grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-16">
+          <!-- Left side: Text content -->
+          <div class="space-y-12">
+            <div class="text-left space-y-4 border-b border-gray-800 pb-8">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
+                Linear Sync Engine
+              </h3>
+              <p class="text-base sm:text-lg text-gray-300">
+                Built with a high-performance architecture and an obsessive focus on speed.
+              </p>
+            </div>
+            
+            <div class="text-left space-y-4 border-b border-gray-800 pb-8">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
+                Enterprise-ready security
+              </h3>
+              <p class="text-base sm:text-lg text-gray-300">
+                Best-in-class security practices keep your work safe and secure at every layer.
+              </p>
+            </div>
+            
+            <div class="text-left space-y-4 border-b border-gray-800 pb-8">
+              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
+                Engineered for scale
+              </h3>
+              <p class="text-base sm:text-lg text-gray-300">
+                Built for teams of all sizes. From early-stage startups to global enterprises.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Right side: Large image on large screens -->
+          <div class="hidden lg:block">
+            <img src="/b13.png" alt="Linear Architecture" class="w-full rounded-lg object-cover shadow-lg" />
+          </div>
+        </div>
+        
+        <!-- Additional image -->
+        <div class="pt-12 flex justify-start">
+          <img src="/b12.png" alt="Linear Architecture" class="w-full lg:w-1/2 max-w-lg rounded-lg object-cover shadow-lg" />
+        </div>
+      </section>
+
+      <!-- Final CTA section -->
+      <section class="py-28">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
+          <!-- Left side: Bold white text -->
+          <div class="flex-1">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+              Plan the present.<br>Build the future.
+            </h2>
+          </div>
+          
+          <!-- Right side: Two buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 lg:flex-shrink-0">
+            <button class="px-6 py-3 text-base font-medium bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200">
+              Talk to sales
+            </button>
+            <button class="px-6 py-3 text-base font-medium bg-white text-black rounded-lg hover:bg-gray-100 transition-colors duration-200">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <Footer client:load />
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const video = document.getElementById('landing-video');
+    const loader = document.getElementById('video-loader');
+    let hasPlayed = false;
+    
+    console.log('Script loaded, video element:', video);
+    
+    // Error handling
+    video.addEventListener('error', function(e) {
+      console.error('Video error:', e);
+      loader.innerHTML = '<div class="text-red-500">Failed to load video</div>';
+    });
+    
+    // When video can start playing
+    video.addEventListener('canplay', function() {
+      console.log('Video can play');
+      if (!hasPlayed) {
+        // Hide loader
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 500);
+        
+        // Show and play video
+        video.classList.remove('opacity-0');
+        video.classList.add('opacity-100');
+        
+        video.play().then(() => {
+          console.log('Video started playing');
+          hasPlayed = true;
+        }).catch(error => {
+          console.error('Error playing video:', error);
+        });
+      }
+    });
+    
+    // When video ends
+    video.addEventListener('ended', function() {
+      console.log('Video ended - staying on last frame');
+    });
+    
+    // Prevent replay
+    video.addEventListener('play', function(e) {
+      if (hasPlayed && video.ended) {
+        console.log('Preventing replay');
+        e.preventDefault();
+        video.pause();
+      }
+    });
+    
+    // Load event
+    video.addEventListener('loadstart', function() {
+      console.log('Video load started');
+    });
+    
+    video.addEventListener('loadedmetadata', function() {
+      console.log('Video metadata loaded');
+    });
+  });
+</script>
