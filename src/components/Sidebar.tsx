@@ -1,18 +1,26 @@
 'use client';
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import type { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const [selected, setSelected] = useState("Collaborative Documents");
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Image mapping for each option
   const imageMapping = {
     "Collaborative Documents": "/CD.png",
     "Inline Comments": "/IC.png",
-    "Text-to-issue commands": "/TC.png"
+    "Text-to-issue commands": "/TC.webm"
   };
+
+  // Play video when Text-to-issue commands is selected
+  useEffect(() => {
+    if (selected === "Text-to-issue commands" && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [selected]);
 
   return (
     <div className="flex flex-col lg:flex-row">
@@ -58,16 +66,30 @@ const Sidebar = () => {
           transition={{ duration: 0.3 }}
           className="w-full"
         >
-          <img 
-            src={imageMapping[selected as keyof typeof imageMapping]} 
-            alt={`${selected} preview`}
-            className="w-full h-auto"
-            onError={(e) => {
-              // Fallback if image doesn't exist
-              const target = e.target as HTMLImageElement;
-              target.src = `https://via.placeholder.com/600x400/333/fff?text=${selected.replace(/\s+/g, '+')}`;
-            }}
-          />
+          {selected === "Text-to-issue commands" ? (
+            <video 
+              ref={videoRef}
+              src={imageMapping[selected as keyof typeof imageMapping]} 
+              className="w-full h-auto rounded-lg"
+              loop
+              muted
+              playsInline
+              onError={(e) => {
+                console.error('Video failed to load:', e);
+              }}
+            />
+          ) : (
+            <img 
+              src={imageMapping[selected as keyof typeof imageMapping]} 
+              alt={`${selected} preview`}
+              className="w-full h-auto rounded-lg"
+              onError={(e) => {
+                // Fallback if image doesn't exist
+                const target = e.target as HTMLImageElement;
+                target.src = `https://via.placeholder.com/600x400/333/fff?text=${selected.replace(/\s+/g, '+')}`;
+              }}
+            />
+          )}
         </motion.div>
       </div>
     </div>
