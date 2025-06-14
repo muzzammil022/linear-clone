@@ -44,6 +44,19 @@ export default function StatusCards() {
 		return () => window.removeEventListener('resize', checkMobile);
 	}, []);
 
+	const handleInteractionStart = (cardId: number) => {
+		setHovered(cardId);
+	};
+
+	const handleInteractionEnd = () => {
+		// Delay clearing hover state on mobile for better UX
+		if (isMobile) {
+			setTimeout(() => setHovered(null), 150);
+		} else {
+			setHovered(null);
+		}
+	};
+
 	return (
 		<div className="relative w-full flex items-center justify-center bg-black px-4 py-16">
 			<div
@@ -73,35 +86,61 @@ export default function StatusCards() {
 						transformOrigin: 'center center',
 					};
 
+					// Mobile-specific animations
+					const mobileAnimations = {
+						scale: isHovered ? hoverScale : 1,
+						y: isHovered ? -6 : 0,
+						zIndex: isHovered ? 100 : zIndex,
+					};
+
+					// Desktop animations
+					const desktopAnimations = {
+						scale: 1,
+						y: 0,
+					};
+
 					return (
 						<motion.div
 							key={card.id}
-							className="absolute w-full p-4 rounded-xl bg-neutral-900 shadow-lg border border-white/10 text-white"
+							className="absolute w-full p-4 rounded-xl bg-neutral-900 shadow-lg border border-white/10 text-white cursor-pointer"
 							style={isMobile ? mobileStyle : desktopStyle}
-							initial={{ scale: 1, y: 0 }}
-							whileHover={{ scale: hoverScale, y: -6 }}
-							whileTap={{ scale: hoverScale * 0.95, y: -3 }} // Added tap animation for mobile
+							initial={isMobile ? { scale: 1, y: 0 } : { scale: 1, y: 0 }}
+							animate={isMobile ? mobileAnimations : desktopAnimations}
+							whileHover={isMobile ? {} : { scale: hoverScale, y: -6 }}
+							whileTap={{ scale: hoverScale * 0.98, y: -3 }}
 							transition={{
 								type: 'spring',
-								stiffness: 200,
-								damping: 20,
-								duration: 0.2, // Faster animation for mobile
+								stiffness: 300,
+								damping: 25,
+								duration: 0.15,
 							}}
-							onMouseEnter={() => setHovered(card.id)}
-							onMouseLeave={() => setHovered(null)}
-							onTouchStart={() => setHovered(card.id)} // Touch support
-							onTouchEnd={() => setHovered(null)}
+							onMouseEnter={() => !isMobile && handleInteractionStart(card.id)}
+							onMouseLeave={() => !isMobile && handleInteractionEnd()}
+							onTouchStart={(e) => {
+								e.preventDefault();
+								handleInteractionStart(card.id);
+							}}
+							onTouchEnd={(e) => {
+								e.preventDefault();
+								handleInteractionEnd();
+							}}
+							onClick={() => {
+								if (isMobile) {
+									handleInteractionStart(card.id);
+									setTimeout(() => setHovered(null), 1000);
+								}
+							}}
 						>
 							<div className="flex items-center gap-2 mb-2">
 								<span
-									className={`font-semibold ${
+									className={`font-semibold transition-colors duration-200 ${
 										shouldShowColor ? card.color : 'text-gray-400'
 									}`}
 								>
 									{card.icon}
 								</span>
 								<span
-									className={`font-semibold ${
+									className={`font-semibold transition-colors duration-200 ${
 										shouldShowColor ? card.color : 'text-gray-400'
 									}`}
 								>
