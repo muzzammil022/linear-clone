@@ -4,8 +4,8 @@ import { LandingText } from '../components/LandingText';
 
 <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <!-- Hero Headline -->
-  <section class="text-center text-xl sm:text-4xl font-bold tracking-tight md:text-6xl md:leading-[4rem] font-system pt-6 space-y-2">
+  <!-- DESKTOP HEADLINE (md and above) -->
+  <section class="hidden md:block text-center text-xl sm:text-4xl font-bold tracking-tight md:text-6xl md:leading-[4rem] font-system pt-6 space-y-2">
     <LandingText client:visible delay={0}>
       Linear is a purpose-built tool
     </LandingText>
@@ -17,14 +17,32 @@ import { LandingText } from '../components/LandingText';
     </LandingText>
   </section>
 
-  <!-- Subtext -->
-  <section class="text-center text-lg text-gray-400 font-medium leading-snug pt-6 max-w-3xl mx-auto">
+  <!-- MOBILE HEADLINE (below md) -->
+<section class="block md:hidden text-center text-4xl font-bold tracking-tight pt-6 space-y-1">
+  <LandingText client:visible delay={0}>
+    Plan and
+  </LandingText>
+  <LandingText client:visible delay={0.3}>
+    build your product
+  </LandingText>
+</section>
+
+  <!-- DESKTOP SUBTEXT -->
+  <section class="hidden md:block text-center text-lg text-gray-400 font-medium leading-snug pt-6 max-w-3xl mx-auto">
     <LandingText client:visible delay={0.9}>
       Meet the system for modern software development. Streamline issues, projects, and product roadmaps.
     </LandingText>
   </section>
 
-  <!-- Buttons -->
+  <!-- MOBILE SUBTEXT -->
+  <section class="block md:hidden text-center text-base text-gray-400 font-medium leading-snug pt-4 max-w-sm mx-auto">
+    <LandingText client:visible delay={0.9}>
+      Linear is a purpose-built tool for modern product development.
+      Streamline issues,projects,and product roadmaps.
+    </LandingText>
+  </section>
+
+  <!-- Buttons (same for all screen sizes, optional to split) -->
   <section class="pt-8 flex flex-wrap justify-center items-center gap-4">
     <div class="bg-white text-black rounded-full px-6 py-3 shadow-md hover:scale-105 transition-transform duration-200">
       <LandingText
