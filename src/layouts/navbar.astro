@@ -1,6 +1,6 @@
-<nav class="bg-black flex justify-between items-center px-8 py-4 w-full fixed top-0 left-0 z-[1000] box-border border-b border-gray-800">
+<nav class="bg-black flex justify-between items-center px-4 py-4 w-full fixed top-0 left-0 z-[1000] box-border border-b border-gray-800">
   <!-- Left side -->
-  <div class="flex items-center flex-none min-w-[150px]">
+  <div class="flex items-center flex-none">
     <img src="/image.png" alt="Logo" class="h-8 w-auto max-w-[120px]">
   </div>
 
@@ -78,16 +78,19 @@
   </div>
 
   <!-- Right side -->
-  <div class="flex items-center flex-none min-w-[150px] justify-end gap-4" id="navbar-right">
-    <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Login</a>
-    <a class="relative flex items-center justify-center px-3 h-8 text-base font-medium bg-white text-black rounded-md no-underline transition-all duration-100 ease-out hover:bg-gray-200 hover:text-black font-system">Sign up</a>
+  <div class="flex items-center gap-2" id="navbar-right">
+    <!-- Login/Signup buttons - always visible -->
+    <div class="flex items-center gap-2">
+      <a class="relative flex items-center justify-center px-2 lg:px-3 h-8 text-sm lg:text-base font-medium text-gray-400 rounded-lg bg-transparent no-underline transition-all duration-100 ease-out hover:text-white hover:bg-white/15 font-system">Login</a>
+      <a class="relative flex items-center justify-center px-2 lg:px-3 h-8 text-sm lg:text-base font-medium bg-white text-black rounded-md no-underline transition-all duration-100 ease-out hover:bg-gray-200 hover:text-black font-system">Sign up</a>
+    </div>
 
-  <!-- Mobile menu button -->
-  <button class="lg:hidden flex flex-col bg-transparent border-none cursor-pointer p-2" id="mobile-toggle">
-    <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
-    <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
-    <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
-  </button>
+    <!-- Mobile menu button -->
+    <button class="lg:hidden flex flex-col bg-transparent border-none cursor-pointer p-2" id="mobile-toggle">
+      <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
+      <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
+      <span class="w-6 h-0.5 bg-white my-0.5 transition-all duration-100 ease-out"></span>
+    </button>
   </div>
 </nav>
 
