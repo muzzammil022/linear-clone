@@ -47,7 +47,7 @@ const cards = [
     },
 ];
 
-export default function CardLayout() {
+export default function CardLayout2() {
     const [selectedId, setSelectedId] = useState<string | null>(null);
     const selectedCard = cards.find((card) => card.id === selectedId);
 
@@ -60,7 +60,11 @@ export default function CardLayout() {
                         key={card.id}
                         className="relative rounded-2xl h-[28rem] cursor-pointer overflow-hidden shadow-xl"
                         onClick={() => setSelectedId(card.id)}
-                        whileHover={{ scale: 1.04 }}
+                        whileHover={{ 
+                            scale: 1.04,
+                            y: -8,
+                            boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.15)"
+                        }}
                         transition={{ type: 'spring', stiffness: 200, damping: 25 }}
                         style={{
                             backgroundImage: `url(${card.img})`,
@@ -68,15 +72,43 @@ export default function CardLayout() {
                             backgroundPosition: 'center',
                         }}
                     >
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/20 p-6 flex flex-col justify-end">
+                        <motion.div 
+                            className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/20 p-6 flex flex-col justify-end"
+                            whileHover={{
+                                background: "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.3))"
+                            }}
+                            transition={{ duration: 0.3 }}
+                        >
                             <div className="flex justify-between items-end">
                                 <div>
-                                    <h2 className="text-2xl font-semibold mb-2">{card.title}</h2>
-                                    <p className="text-gray-300 text-base">{card.short}</p>
+                                    <motion.h2 
+                                        className="text-2xl font-semibold mb-2"
+                                        whileHover={{ y: -2 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        {card.title}
+                                    </motion.h2>
+                                    <motion.p 
+                                        className="text-gray-300 text-base"
+                                        whileHover={{ color: "#ffffff", y: -1 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        {card.short}
+                                    </motion.p>
                                 </div>
-                                <span className="text-2xl text-white/80 hover:text-white font-bold ml-4">&gt;</span>
+                                <motion.span 
+                                    className="text-2xl text-white/80 hover:text-white font-bold ml-4"
+                                    whileHover={{ 
+                                        scale: 1.2,
+                                        rotate: 90,
+                                        color: "#ffffff"
+                                    }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    &gt;
+                                </motion.span>
                             </div>
-                        </div>
+                        </motion.div>
                     </motion.div>
                 ))}
             </div>
@@ -90,21 +122,55 @@ export default function CardLayout() {
                             className="flex-shrink-0 w-80 rounded-2xl h-[28rem] cursor-pointer overflow-hidden shadow-xl relative"
                             onClick={() => setSelectedId(card.id)}
                             whileTap={{ scale: 0.97 }}
+                            whileHover={{ 
+                                scale: 1.02,
+                                y: -4,
+                                boxShadow: "0 20px 40px -12px rgba(255, 255, 255, 0.1)"
+                            }}
+                            transition={{ type: 'spring', stiffness: 200, damping: 25 }}
                             style={{
                                 backgroundImage: `url(${card.img})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
                             }}
                         >
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/20 p-6 flex flex-col justify-end">
+                            <motion.div 
+                                className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/60 to-black/20 p-6 flex flex-col justify-end"
+                                whileHover={{
+                                    background: "linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.3))"
+                                }}
+                                transition={{ duration: 0.3 }}
+                            >
                                 <div className="flex justify-between items-end">
                                     <div>
-                                        <h2 className="text-2xl font-semibold mb-2">{card.title}</h2>
-                                        <p className="text-gray-300 text-base">{card.short}</p>
+                                        <motion.h2 
+                                            className="text-2xl font-semibold mb-2"
+                                            whileHover={{ y: -2 }}
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            {card.title}
+                                        </motion.h2>
+                                        <motion.p 
+                                            className="text-gray-300 text-base"
+                                            whileHover={{ color: "#ffffff", y: -1 }}
+                                            transition={{ duration: 0.2 }}
+                                        >
+                                            {card.short}
+                                        </motion.p>
                                     </div>
-                                    <span className="text-2xl text-white/80 hover:text-white font-bold ml-4">&gt;</span>
+                                    <motion.span 
+                                        className="text-2xl text-white/80 hover:text-white font-bold ml-4"
+                                        whileHover={{ 
+                                            scale: 1.2,
+                                            rotate: 90,
+                                            color: "#ffffff"
+                                        }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        &gt;
+                                    </motion.span>
                                 </div>
-                            </div>
+                            </motion.div>
                         </motion.div>
                     ))}
                 </div>
@@ -138,12 +204,17 @@ export default function CardLayout() {
                                     <h2 className="text-3xl font-bold mb-3">{selectedCard.title}</h2>
                                     <p className="text-gray-200 text-base leading-relaxed pr-2">{selectedCard.short}</p>
                                 </div>
-                                <button
+                                <motion.button
                                     onClick={() => setSelectedId(null)}
                                     className="text-2xl self-end text-white/80 hover:text-white transition"
+                                    whileHover={{ 
+                                        scale: 1.2,
+                                        rotate: 90,
+                                        color: "#ffffff"
+                                    }}
+                                    transition={{ duration: 0.2 }}
                                 >
-                                    ×
-                                </button>
+                                </motion.button>
                             </div>
                         </motion.div>
                     </motion.div>
