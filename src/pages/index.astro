@@ -15,8 +15,8 @@ import Footer from '../components/footer';
   <Landing />
   
   <!-- Video section that touches page margins - NO PADDING -->
-  <section class="w-full py-16 flex items-center justify-center">
-    <div class="relative w-full">
+  <section class="w-full py-8 sm:py-12 lg:py-16 flex items-center justify-center">
+    <div class="relative w-full px-4 sm:px-0">
       <video 
         id="landing-video"
         class="w-full rounded-lg object-cover shadow-lg"
@@ -36,26 +36,26 @@ import Footer from '../components/footer';
     <div class="max-w-7xl mx-auto">
 
       <!-- Text: Powering the world's best... -->
-      <section class="py-16 text-center space-y-4">
-        <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+      <section class="py-8 sm:py-12 lg:py-16 text-center space-y-3 sm:space-y-4">
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
           Powering the world's best product teams.
         </p>
-        <p class="text-base sm:text-lg md:text-xl text-gray-300">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
           From next-gen startups to established enterprises.
         </p>
       </section>
 
       <!-- Animated Customer Grid -->
-      <section class="py-16">
+      <section class="py-8 sm:py-12 lg:py-16">
         <CustomerGrid client:load />
       </section>
 
       <!-- Text: Made for modern product teams -->
-      <section class="py-24 text-center space-y-6">
-        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+      <section class="py-12 sm:py-16 lg:py-24 text-center space-y-4 sm:space-y-6">
+        <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
           Made for modern product teams
         </p>
-        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Linear is shaped by the practices and principles that distinguish world-class product teams from the rest: 
           relentless focus, fast execution, and a commitment to the quality of craft. 
           <span class="underline underline-offset-4 hover:text-white cursor-pointer transition">Make the switch →</span>
@@ -66,7 +66,7 @@ import Footer from '../components/footer';
   </div>
 
   <!-- Full-screen-wide CardLayout -->
-  <section class="w-full py-12 bg-black">
+  <section class="w-full py-8 sm:py-12 bg-black">
     <CardLayout client:load />
   </section>
 
@@ -75,30 +75,30 @@ import Footer from '../components/footer';
     <div class="max-w-7xl mx-auto">
 
       <!-- Set the product direction section -->
-      <section class="py-28 text-center space-y-6">
-        <p><span class="hover:text-white cursor-pointer transition">✅ Project and Long Term Planning →</span></p>
-        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+      <section class="py-16 sm:py-20 lg:py-28 text-center space-y-4 sm:space-y-6">
+        <p><span class="hover:text-white cursor-pointer transition text-sm sm:text-base">✅ Project and Long Term Planning →</span></p>
+        <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
           Set the product direction
         </p>
-        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Align your team around a unified product timeline. 
           <span class="text-white">Plan, manage, and track all product initiatives with Linear's visual planning tools.</span>
         </p>
       </section>
 
       <!-- Full-width image -->
-      <section class="py-16">
+      <section class="py-8 sm:py-12 lg:py-16">
         <img src="/b1.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
       </section>
 
       <!-- Two-column layout -->
-      <div class="py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-        <div class="space-y-8">
-          <section class="text-center lg:text-left space-y-4">
-            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+      <div class="py-8 sm:py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
+        <div class="space-y-6 sm:space-y-8">
+          <section class="text-center lg:text-left space-y-3 sm:space-y-4">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               Manage projects end-to-end
             </p>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
               Consolidate specs, milestones, tasks, and other documentation in one centralized location.
             </p>
           </section>
@@ -107,12 +107,12 @@ import Footer from '../components/footer';
           </section>
         </div>
         
-        <div class="space-y-8">
-          <section class="text-center lg:text-left space-y-4">
-            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+        <div class="space-y-6 sm:space-y-8">
+          <section class="text-center lg:text-left space-y-3 sm:space-y-4">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               Track progress seamlessly
             </p>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
               Monitor project milestones, deadlines, and team performance with real-time updates and analytics.
             </p>
           </section>
@@ -123,37 +123,37 @@ import Footer from '../components/footer';
       </div>
 
       <!-- Sidebar section -->
-      <section class="py-24">
+      <section class="py-12 sm:py-16 lg:py-24">
         <Sidebar client:load />
-        <div class="mt-8">
+        <div class="mt-6 sm:mt-8">
           <img src="/b4.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
         </div>
       </section>
 
       <!-- Issue tracking section -->
-      <section class=" text-center space-y-6">
-        <p><span class="hover:text-white cursor-pointer transition">〽️ Task Tracking and sprint planning →</span></p>
-        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+      <section class="py-16 sm:py-20 lg:py-28 text-center space-y-4 sm:space-y-6">
+        <p><span class="hover:text-white cursor-pointer transition text-sm sm:text-base">〽️ Task Tracking and sprint planning →</span></p>
+        <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
           Issue tracking you'll enjoy using
         </p>
-        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Optimized for speed and efficiency. 
           <span class="text-white">Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.</span>
         </p>
       </section>
 
-      <section class="py-8">
+      <section class="py-6 sm:py-8">
         <img src="/b5.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
       </section>
 
       <!-- Cycles and Triage section -->
-      <div class="py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-        <div class="space-y-8">
-          <section class="text-center lg:text-left space-y-4">
-            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+      <div class="py-8 sm:py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
+        <div class="space-y-6 sm:space-y-8">
+          <section class="text-center lg:text-left space-y-3 sm:space-y-4">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               Build momentum with Cycles
             </p>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
               Create healthy routines and focus your team on what work should happen next.
             </p>
           </section>
@@ -162,12 +162,12 @@ import Footer from '../components/footer';
           </section>
         </div>
         
-        <div class="space-y-8">
-          <section class="text-center lg:text-left space-y-4">
-            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+        <div class="space-y-6 sm:space-y-8">
+          <section class="text-center lg:text-left space-y-3 sm:space-y-4">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               Manage incoming work with Triage
             </p>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
               Review and assign incoming bug reports, feature requests, and other unplanned work.
             </p>
           </section>
@@ -178,49 +178,49 @@ import Footer from '../components/footer';
       </div>
 
       <!-- Linear Insights section -->
-      <section class=" space-y-6">
-        <div class="text-center lg:text-left space-y-4">
-          <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+      <section class="py-8 sm:py-12 lg:py-16 space-y-4 sm:space-y-6">
+        <div class="text-center lg:text-left space-y-3 sm:space-y-4">
+          <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
             Linear Insights
           </p>
-          <p class="text-base sm:text-lg md:text-xl text-gray-300">
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
             Take the guesswork out of product planning with realtime, actionable data analytics.
           </p>
           <div class="flex justify-center lg:justify-start">
-            <a class="inline-flex items-center justify-center px-6 py-2 text-base font-medium bg-white text-black rounded-md no-underline transition-all duration-200 hover:bg-gray-200">
+            <a class="inline-flex items-center justify-center px-4 sm:px-6 py-2 text-sm sm:text-base font-medium bg-white text-black rounded-md no-underline transition-all duration-200 hover:bg-gray-200">
               Learn More →
             </a>
           </div>
         </div>
-        <div class="pt-8">
+        <div class="pt-6 sm:pt-8">
           <img src="/b8.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
         </div>
       </section>
 
       <!-- AI section -->
-      <section class="py-28 text-center space-y-6">
-        <p><span class="hover:text-white cursor-pointer transition">🔹 Artificial intelligence →</span></p>
-        <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+      <section class="py-16 sm:py-20 lg:py-28 text-center space-y-4 sm:space-y-6">
+        <p><span class="hover:text-white cursor-pointer transition text-sm sm:text-base">🔹 Artificial intelligence →</span></p>
+        <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
           AI-powered productivity
         </p>
-        <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
           <span class="text-white">Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.</span>
           Choose from a variety of AI agents and start delegating work, from code generation to other technical tasks.
         </p>
       </section>
 
-      <section class="py-8">
+      <section class="py-6 sm:py-8">
         <img src="/b9.png" alt="AI Features" class="w-full rounded-lg object-cover shadow-lg" />
       </section>
 
       <!-- Linear MCP and AI built-in -->
-      <div class="py-16 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-        <div class="space-y-8">
-          <section class="text-center lg:text-left space-y-4">
-            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+      <div class="py-8 sm:py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
+        <div class="space-y-6 sm:space-y-8">
+          <section class="text-center lg:text-left space-y-3 sm:space-y-4">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               Linear MCP
             </p>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
               Connect Linear to your favorite tools including Cursor, Claude, ChatGPT, and more.
             </p>
           </section>
@@ -229,12 +229,12 @@ import Footer from '../components/footer';
           </section>
         </div>
         
-        <div class="space-y-8">
-          <section class="text-center lg:text-left space-y-4">
-            <p class="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+        <div class="space-y-6 sm:space-y-8">
+          <section class="text-center lg:text-left space-y-3 sm:space-y-4">
+            <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               AI natively built in
             </p>
-            <p class="text-base sm:text-lg md:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
               Linear uses the latest language models to power workflows from semantic search to summarizing your team's project updates.
             </p>
           </section>
@@ -245,44 +245,44 @@ import Footer from '../components/footer';
       </div>
 
       <!-- Built on strong foundations -->
-      <section class="py-28 text-center space-y-12">
-        <div class="space-y-6">
-          <p><span class="hover:text-white cursor-pointer transition">Under the hood →</span></p>
-          <p class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight">
+      <section class="py-16 sm:py-20 lg:py-28 text-center space-y-8 sm:space-y-12">
+        <div class="space-y-4 sm:space-y-6">
+          <p><span class="hover:text-white cursor-pointer transition text-sm sm:text-base">Under the hood →</span></p>
+          <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
             Built on strong foundations 
           </p>
-          <p class="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Linear is so simple to use, it's easy to overlook the wealth of complex technologies packed under the hood that keep Linear robust, safe, and blazing fast.
           </p>
         </div>
         
         <!-- Features grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 pt-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 pt-8 sm:pt-16">
           <!-- Left side: Text content -->
-          <div class="space-y-12">
-            <div class="text-left space-y-4 border-b border-gray-800 pb-8">
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
+          <div class="space-y-8 sm:space-y-12">
+            <div class="text-left space-y-3 sm:space-y-4 border-b border-gray-800 pb-6 sm:pb-8">
+              <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
                 Linear Sync Engine
               </h3>
-              <p class="text-base sm:text-lg text-gray-300">
+              <p class="text-sm sm:text-base md:text-lg text-gray-300">
                 Built with a high-performance architecture and an obsessive focus on speed.
               </p>
             </div>
             
-            <div class="text-left space-y-4 border-b border-gray-800 pb-8">
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
+            <div class="text-left space-y-3 sm:space-y-4 border-b border-gray-800 pb-6 sm:pb-8">
+              <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
                 Enterprise-ready security
               </h3>
-              <p class="text-base sm:text-lg text-gray-300">
+              <p class="text-sm sm:text-base md:text-lg text-gray-300">
                 Best-in-class security practices keep your work safe and secure at every layer.
               </p>
             </div>
             
-            <div class="text-left space-y-4 border-b border-gray-800 pb-8">
-              <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-white">
+            <div class="text-left space-y-3 sm:space-y-4 border-b border-gray-800 pb-6 sm:pb-8">
+              <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
                 Engineered for scale
               </h3>
-              <p class="text-base sm:text-lg text-gray-300">
+              <p class="text-sm sm:text-base md:text-lg text-gray-300">
                 Built for teams of all sizes. From early-stage startups to global enterprises.
               </p>
             </div>
@@ -295,32 +295,34 @@ import Footer from '../components/footer';
         </div>
         
         <!-- Additional image -->
-        <div class="pt-12 flex justify-start">
-          <img src="/b12.png" alt="Linear Architecture" class="w-full lg:w-1/2 max-w-lg rounded-lg object-cover shadow-lg" />
+        <div class="pt-8 sm:pt-12 flex justify-center lg:justify-start">
+          <img src="/b12.png" alt="Linear Architecture" class="w-full sm:w-3/4 lg:w-1/2 max-w-lg rounded-lg object-cover shadow-lg" />
         </div>
       </section>
 
       <!-- Final CTA section -->
-      <section class="py-28">
-        <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8">
+      <section class="py-16 sm:py-20 lg:py-28">
+        <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-6 sm:gap-8">
           <!-- Left side: Bold white text -->
-          <div class="flex-1">
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+          <div class="flex-1 text-center lg:text-left">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
               Plan the present.<br>Build the future.
             </h2>
           </div>
           
           <!-- Right side: Two buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 lg:flex-shrink-0">
-            <button class="px-6 py-3 text-base font-medium bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200">
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:flex-shrink-0 w-full sm:w-auto">
+            <button class="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-200 w-full sm:w-auto">
               Talk to sales
             </button>
-            <button class="px-6 py-3 text-base font-medium bg-white text-black rounded-lg hover:bg-gray-100 transition-colors duration-200">
+            <button class="px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base font-medium bg-white text-black rounded-lg hover:bg-gray-100 transition-colors duration-200 w-full sm:w-auto">
               Get Started
             </button>
           </div>
         </div>
-        <CardLayout2 client:load/>
+        <div class="mt-8 sm:mt-12">
+          <CardLayout2 client:load/>
+        </div>
       </section>
 
     </div>
