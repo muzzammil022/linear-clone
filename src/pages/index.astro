@@ -14,48 +14,48 @@ import Footer from '../components/footer';
   <Navbar />
   <Landing />
   
-  <!-- Video section that touches page margins - NO PADDING -->
-  <section class="w-full py-8 sm:py-12 lg:py-16 flex items-center justify-center">
-    <div class="relative w-full px-4 sm:px-0">
+  <!-- Video section with proper mobile spacing -->
+  <section class="w-full py-6 sm:py-8 lg:py-16 flex items-center justify-center">
+    <div class="relative w-full px-3 sm:px-4 lg:px-0 max-w-7xl mx-auto">
       <video 
         id="landing-video"
-        class="w-full rounded-lg object-cover shadow-lg"
+        class="w-full rounded-lg object-cover shadow-lg max-h-[50vh] sm:max-h-[60vh] lg:max-h-none"
         muted
         playsinline
         preload="auto"
         controls={false}
       >
         <source src="/land.webm" type="video/webm">
-        <p class="text-white">Your browser doesn't support video playbook.</p>
+        <p class="text-white">Your browser doesn't support video playback.</p>
       </video>
     </div>
   </section>
   
   <!-- Main content wrapper with consistent margins -->
-  <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+  <div class="w-full px-3 sm:px-4 lg:px-6 xl:px-8 2xl:px-12">
     <div class="max-w-7xl mx-auto">
 
       <!-- Text: Powering the world's best... -->
       <section class="py-8 sm:py-12 lg:py-16 text-center space-y-3 sm:space-y-4">
-        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-4">
           Powering the world's best product teams.
         </p>
-        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 px-4">
           From next-gen startups to established enterprises.
         </p>
       </section>
 
       <!-- Animated Customer Grid -->
-      <section class="py-8 sm:py-12 lg:py-16">
+      <section class="py-6 sm:py-8 lg:py-12">
         <CustomerGrid client:load />
       </section>
 
       <!-- Text: Made for modern product teams -->
-      <section class="py-12 sm:py-16 lg:py-24 text-center space-y-4 sm:space-y-6">
-        <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
+      <section class="py-8 sm:py-12 lg:py-20 text-center space-y-4 sm:space-y-6 px-3 sm:px-4">
+        <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white leading-tight">
           Made for modern product teams
         </p>
-        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base md:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Linear is shaped by the practices and principles that distinguish world-class product teams from the rest: 
           relentless focus, fast execution, and a commitment to the quality of craft. 
           <span class="underline underline-offset-4 hover:text-white cursor-pointer transition">Make the switch →</span>
@@ -65,40 +65,40 @@ import Footer from '../components/footer';
     </div>
   </div>
 
-  <!-- Full-screen-wide CardLayout -->
-  <section class="w-full py-8 sm:py-12 bg-black">
+  <!-- Full-screen-wide CardLayout with proper spacing -->
+  <section class="w-full py-6 sm:py-8 lg:py-12 bg-black">
     <CardLayout client:load />
   </section>
 
   <!-- Content sections with consistent spacing -->
-  <div class="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-    <div class="max-w-7xl mx-auto">
+  <div class="w-full px-3 sm:px-4 lg:px-6 xl:px-8 2xl:px-12">
+    <div class="max-w-7xl mx-auto space-y-12 sm:space-y-16 lg:space-y-24">
 
       <!-- Set the product direction section -->
-      <section class="py-16 sm:py-20 lg:py-28 text-center space-y-4 sm:space-y-6">
+      <section class="text-center space-y-4 sm:space-y-6 px-3 sm:px-4">
         <p><span class="hover:text-white cursor-pointer transition text-sm sm:text-base">✅ Project and Long Term Planning →</span></p>
-        <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
+        <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold text-white leading-tight">
           Set the product direction
         </p>
-        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base md:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Align your team around a unified product timeline. 
           <span class="text-white">Plan, manage, and track all product initiatives with Linear's visual planning tools.</span>
         </p>
       </section>
 
-      <!-- Full-width image -->
-      <section class="py-8 sm:py-12 lg:py-16">
+      <!-- Full-width image with proper mobile handling -->
+      <section>
         <img src="/b1.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
       </section>
 
-      <!-- Two-column layout -->
-      <div class="py-8 sm:py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
+      <!-- Two-column layout with proper mobile stacking -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div class="space-y-6 sm:space-y-8">
           <section class="text-center lg:text-left space-y-3 sm:space-y-4">
             <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               Manage projects end-to-end
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg text-gray-300">
               Consolidate specs, milestones, tasks, and other documentation in one centralized location.
             </p>
           </section>
@@ -112,7 +112,7 @@ import Footer from '../components/footer';
             <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white">
               Track progress seamlessly
             </p>
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+            <p class="text-sm sm:text-base md:text-lg text-gray-300">
               Monitor project milestones, deadlines, and team performance with real-time updates and analytics.
             </p>
           </section>
@@ -122,21 +122,21 @@ import Footer from '../components/footer';
         </div>
       </div>
 
-      <!-- Sidebar section -->
-      <section class="py-12 sm:py-16 lg:py-24">
+      <!-- Sidebar section with mobile improvements -->
+      <section class="pt-28">
         <Sidebar client:load />
         <div class="mt-6 sm:mt-8">
           <img src="/b4.png" alt="Product Planning" class="w-full rounded-lg object-cover shadow-lg" />
         </div>
       </section>
-
+      
       <!-- Issue tracking section -->
       <section class="py-16 sm:py-20 lg:py-28 text-center space-y-4 sm:space-y-6">
         <p><span class="hover:text-white cursor-pointer transition text-sm sm:text-base">〽️ Task Tracking and sprint planning →</span></p>
         <p class="text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold text-white leading-tight">
           Issue tracking you'll enjoy using
         </p>
-        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base md:text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
           Optimized for speed and efficiency. 
           <span class="text-white">Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.</span>
         </p>
@@ -333,10 +333,10 @@ import Footer from '../components/footer';
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('landing-video');
+    const video = document.getElementById('landing-video') as HTMLVideoElement;
     let hasPlayed = false;
     
-    console.log('Script loaded, video element:', video);
+    if (!video) return;
     
     // Error handling
     video.addEventListener('error', function(e) {
@@ -345,10 +345,8 @@ import Footer from '../components/footer';
     
     // When video can start playing
     video.addEventListener('canplay', function() {
-      console.log('Video can play');
       if (!hasPlayed) {
         video.play().then(() => {
-          console.log('Video started playing');
           hasPlayed = true;
         }).catch(error => {
           console.error('Error playing video:', error);
@@ -359,24 +357,6 @@ import Footer from '../components/footer';
     // When video ends
     video.addEventListener('ended', function() {
       console.log('Video ended - staying on last frame');
-    });
-    
-    // Prevent replay
-    video.addEventListener('play', function(e) {
-      if (hasPlayed && video.ended) {
-        console.log('Preventing replay');
-        e.preventDefault();
-        video.pause();
-      }
-    });
-    
-    // Load event
-    video.addEventListener('loadstart', function() {
-      console.log('Video load started');
-    });
-    
-    video.addEventListener('loadedmetadata', function() {
-      console.log('Video metadata loaded');
     });
   });
 </script>
