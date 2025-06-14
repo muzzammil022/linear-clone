@@ -17,20 +17,15 @@ import Footer from '../components/footer';
   <!-- Video section that touches page margins - NO PADDING -->
   <section class="w-full py-16 flex items-center justify-center">
     <div class="relative w-full">
-      <!-- Loading indicator -->
-      <div id="video-loader" class="absolute inset-0 flex items-center justify-center bg-gray-900 rounded-lg z-10">
-        <div class="text-white">Loading video...</div>
-      </div>
-      
       <video 
         id="landing-video"
-        class="w-full rounded-lg object-cover shadow-lg opacity-0 transition-opacity duration-500"
+        class="w-full rounded-lg object-cover shadow-lg"
         muted
         playsinline
         preload="auto"
         controls={false}
       >
-        <source src="/land.mp4" type="video/mp4">
+        <source src="/land.webm" type="video/webm">
         <p class="text-white">Your browser doesn't support video playbook.</p>
       </video>
     </div>
@@ -337,7 +332,6 @@ import Footer from '../components/footer';
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('landing-video');
-    const loader = document.getElementById('video-loader');
     let hasPlayed = false;
     
     console.log('Script loaded, video element:', video);
@@ -345,21 +339,12 @@ import Footer from '../components/footer';
     // Error handling
     video.addEventListener('error', function(e) {
       console.error('Video error:', e);
-      loader.innerHTML = '<div class="text-red-500">Failed to load video</div>';
     });
     
     // When video can start playing
     video.addEventListener('canplay', function() {
       console.log('Video can play');
       if (!hasPlayed) {
-        // Hide loader
-        loader.style.opacity = '0';
-        setTimeout(() => loader.style.display = 'none', 500);
-        
-        // Show and play video
-        video.classList.remove('opacity-0');
-        video.classList.add('opacity-100');
-        
         video.play().then(() => {
           console.log('Video started playing');
           hasPlayed = true;
