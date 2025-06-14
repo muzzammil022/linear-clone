@@ -9,9 +9,9 @@ const Sidebar = () => {
 
   // Image mapping for each option
   const imageMapping = {
-    "Collaborative Documents": "public/CD.png",
-    "Inline Comments": "public/IC.png",
-    "Text-to-issue commands": "public/TC.png"
+    "Collaborative Documents": "/CD.png",
+    "Inline Comments": "/IC.png",
+    "Text-to-issue commands": "/TC.png"
   };
 
   return (
